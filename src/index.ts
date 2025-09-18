@@ -59,7 +59,7 @@ basekit.addField({
     messages: {
       "zh-CN": {
         szrfwkey: "数字人服务key",
-        keyHolder: "请联系对接人获取subkey",
+        keyHolder: "请联系对接人获取subkey(Tel:15623339073)",
         noMatchId: "无效的数字演员ID，请联系对接人获取",
         szryyid: "数字演员",
         spzt: "视频主题",
@@ -67,7 +67,7 @@ basekit.addField({
         cpt: "产品图",
       },
       "en-US": {
-        szrfwkey: "Digital Human Service Key",
+        szrfwkey: "Digital Human Service Key(Tel:15623339073)",
         keyHolder: "Please contact the connector to obtain the subkey",
         undefinedId:
           "Invalid Digital Actor ID, please contact the connector to obtain",
@@ -77,7 +77,7 @@ basekit.addField({
         cpt: "Product Image",
       },
       "ja-JP": {
-        szrfwkey: "デジタルヒューマンサービスキー",
+        szrfwkey: "デジタルヒューマンサービスキー(Tel:15623339073)",
         keyHolder: "接続者に連絡してサブキーを取得してください",
         undefinedId:
           "無効なデジタルアクターID、接続者に連絡して取得してください",
@@ -120,7 +120,7 @@ basekit.addField({
         supportType: [FieldType.Text],
       },
       validator: {
-        required: false,
+        required: true,
       },
     },
     {
@@ -131,7 +131,7 @@ basekit.addField({
         supportType: [FieldType.Text],
       },
       validator: {
-        required: true,
+        required: false,
       },
     },
     {
@@ -184,12 +184,12 @@ basekit.addField({
     const { vhBizId, topic, content, imageUrl, subKey } = formItemParams;
     try {
       // 校验必填参数
-      if (!vhBizId.value || !content) {
-        console.log("缺少必填参数", vhBizId.value, content);
+      if (!vhBizId.value || !topic) {
+        console.log("缺少必填参数", vhBizId.value, topic);
         return { code: FieldCode.InvalidArgument, data: "" };
       }
       let params = {
-        content: content[0].text, // 口播文案
+        content: content ? content[0].text : "", // 口播文案
         topic: topic ? topic[0].text : "", // 视频主题
         vhBizId: vhBizId.value, // 数字人id
         materialList:
