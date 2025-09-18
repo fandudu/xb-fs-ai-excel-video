@@ -59,7 +59,7 @@ basekit.addField({
     messages: {
       "zh-CN": {
         szrfwkey: "数字人服务key",
-        keyHolder: "请联系对接人获取subkey(Tel:15623339073)",
+        keyHolder: "请联系：15623339073 获取subkey",
         noMatchId: "无效的数字演员ID，请联系对接人获取",
         szryyid: "数字演员",
         spzt: "视频主题",
@@ -67,8 +67,8 @@ basekit.addField({
         cpt: "产品图",
       },
       "en-US": {
-        szrfwkey: "Digital Human Service Key(Tel:15623339073)",
-        keyHolder: "Please contact the connector to obtain the subkey",
+        szrfwkey: "Digital Human Service Key",
+        keyHolder: "Please contact: 15623339073 to obtain the subkey",
         undefinedId:
           "Invalid Digital Actor ID, please contact the connector to obtain",
         szryyid: "Digital Actor ID",
@@ -77,8 +77,8 @@ basekit.addField({
         cpt: "Product Image",
       },
       "ja-JP": {
-        szrfwkey: "デジタルヒューマンサービスキー(Tel:15623339073)",
-        keyHolder: "接続者に連絡してサブキーを取得してください",
+        szrfwkey: "デジタルヒューマンサービスキー",
+        keyHolder: "接続者に連絡してsubkeyを取得してください：15623339073",
         undefinedId:
           "無効なデジタルアクターID、接続者に連絡して取得してください",
         szryyid: "デジタルアクターID",
